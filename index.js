@@ -13,10 +13,10 @@ function destructivelyUpdateEmployeeWithKeyAndValue(employee,name,streetAddress)
 }
 function deleteFromEmployeeByKey(employee,name,streetAddress){
     const employee2 = {...employee};
-    employee2[name]  = streetAddress;
+    delete employee2.name;
     return(employee2);
 }
 function destructivelyDeleteFromEmployeeByKey(employee,name,streetAddress){
-    employee[name]  = streetAddress;
+    delete employee.name;
     return(employee);
 }
